@@ -1,0 +1,26 @@
+import streamlit as st
+st.title("Streamlit demo application")
+st.header("this is a heading of my streamlit app")
+st.text("this is demo text")
+st.success("its a success")
+st.warning("This is a final warning")
+st.info("here's a info")
+st.error("Error")
+if st.checkbox("select/Unselect"):
+    st.success("You have selected the checkbox")
+else:
+    st.warning("Checbox is not selected")
+input_radio = st.radio("What is your fav colour?",
+                       ("Red","Green","Blue"))
+st.text(f"You have selected{input_radio}")
+
+occupation = st.selectbox("What do you do?",
+                          ("Farmer","manager","Doctor","Bussiness","Frelancer"))   
+multi_select = st.multiselect("What do you do?",
+                          ("Farmer","manager","Doctor","Bussiness","Frelancer"))   
+def welcome():
+    return "this is the output from function"
+if st.button("Submit"):
+    st.text(welcome())
+st.sidebar.header("Heading of a sidebar")
+    
